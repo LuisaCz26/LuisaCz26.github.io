@@ -1,0 +1,326 @@
+body, html{
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.bg-carbon {
+    background-color: #333;
+}
+
+.section .bg-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+}
+
+.section .bg-rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 100% 100%);
+}
+
+.section .bg-bottom-waves {
+    position: absolute;
+    bottom: -2px;
+}
+
+.section .title-white {
+    color: white;
+    font-family: 'Segoe UI';
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.section .title-black {
+    color: #333;
+    font-family: 'Segoe UI';
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-header {
+    position: relative;
+    background-color: #eee;
+    width: 30%;
+    height: 100%;
+}
+
+.right-header{
+    position: relative;
+    background-color: #333;
+    width: 70%;
+    height: 100%;
+}
+
+.right-header .navbar ul {
+    display: table;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.right-header .navbar li {
+    float: left;
+}
+
+.right-header .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-weight: bolder;
+}
+
+.right-header .content {
+    position: absolute;
+    top: 40%;
+    left: 320px;
+    transform: translateY(-50%);
+    font-family: 'Segoe UI';
+    color: white;
+}
+
+.right-header .hello {
+    position: relative;
+    font-family: 'Roboto Condensed', 'Segoe UI';
+    font-weight: bolder;
+    opacity: 0.95;
+    font-size: 40px;
+    margin-bottom: 120px;
+}
+
+.right-header .hello::after{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 18px;
+    bottom: 0px;
+    left: -3px;
+    background-color: #a7a711;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.right-header .info {
+    font-family: 'Roboto Condensed', 'Segoe UI';
+    margin-left: 140px;
+    width: 600px;
+}
+
+.right-header .info h3 {
+    font-size: 22px;
+}
+
+.right-header-image {
+    display: block;
+    position: absolute;
+    top: 50% !important;
+    left: 0% !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 50%;
+
+    width: 600px;
+    height: 600px;
+}
+
+.cards-project-container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-project {
+    position: relative;
+    box-shadow: 3px 3px 10px 0px rgba(80,80,80,0.75);
+    margin: 0 8px 0 8px;
+}
+
+.card-project:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.card-project-header {
+    background-color: #222;
+    width: 300px;
+    color: white;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Segoe UI';
+    text-align: center;
+}
+
+.card-project-image {
+    display: block;
+    width: 300px;
+    height: 220px;
+}
+
+.card-project-body {
+    display: block;
+    width: 300px;
+    height: 280px;
+    background-color: white;
+    padding: 10px;
+    font-family: 'Roboto Condensed';
+}
+
+.skills-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    padding: 42px;
+    border-radius: 50px;
+}
+
+.skills-wrapper {
+    display: flex;
+}
+
+.skill {
+    display: flex;
+    flex-basis: 50%;
+    margin: 16px 32px 0 0;
+}
+
+.skill-description{
+    display: inline-block;
+}
+
+.skill-description img {
+    display: block;
+    width: 64px;
+}
+
+.skill-level-container {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.skill-level {
+    display: inline-block;
+    background-color: #eee;
+    width: 30px; 
+    height: 14px;
+    margin-left: 8px; 
+    transform: skew(20deg);
+}
+
+.skill-level.active {
+    background-color: #333;
+}
+
+.skill-level.inactive {
+    background-color: #aaa;
+}
+
+.courses-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    font-family: 'Roboto Condensed', 'Segoe UI';
+}
+
+.course-left {
+    display: flex;
+    border-right: 8px solid #666;
+    width: 400px;
+}
+
+.course-left .image {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+}
+
+.course-left .info {
+    width: 355px;
+}
+
+.course-right {
+    display: flex;
+    border-left: 8px solid #666;
+    width: 400px;
+    margin-left: 400px;
+}
+
+.course-right .image {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+}
+
+.course-right .info {
+    width: 355px;
+}
+
+.contact-section-bg {
+    background-color: #333;
+}
+
+.contact-section {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    padding: 50px 0;
+}
+
+.contact-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact-info img {
+    display: inline-block;
+    width: 60px;
+    margin-left: 12px;
+}
+
+.left-hand {
+    position: absolute;
+    left: 0;
+    width: calc(50% - 150px);
+    height: 20vh;
+}
+
+.right-hand {
+    position: absolute;
+    right: 0;
+    width: calc(50% - 150px);
+    height: 20vh;
+}
